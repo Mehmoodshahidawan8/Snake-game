@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #6a11cb, #2575fc); /* RGB background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: backgroundShift 5s linear infinite;
+  }
+  
+  @keyframes backgroundShift {
+    0% { background: linear-gradient(to right, #ff7e5f, #feb47b, #6a11cb, #2575fc); }
+    50% { background: linear-gradient(to right, #6a11cb, #2575fc, #ff7e5f, #feb47b); }
+    100% { background: linear-gradient(to right, #ff7e5f, #feb47b, #6a11cb, #2575fc); }
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  #gameCanvas {
+    border: 2px solid #000;
+    background-color: #fff;
+  }
+  
+  .score {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .clicky-btn {
+    background-color: #1db954;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .clicky-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .clicky-btn:active {
+    transform: scale(0.9);
+  }
+  
+  button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+  }
+  
